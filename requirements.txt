@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+requests
+python-multipart
+pillow
+opencv-python
+fer
+librosa
+soundfile
+numpy
+scikit-learn
+transformers
+torch
+torchaudio

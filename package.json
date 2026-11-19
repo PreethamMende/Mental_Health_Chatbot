@@ -1,0 +1,12 @@
+{
+  "name": "mindcare-ai",
+  "version": "1.0.0",
+  "description": "AI-powered mental health chatbot with live emotion analysis.",
+  "main": "app.js",
+ "scripts": {
+  "start": "live-server --no-browser --quiet --ignore='*.mp4,*.jpg,*.jpeg,*.png,*.py'"
+},
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

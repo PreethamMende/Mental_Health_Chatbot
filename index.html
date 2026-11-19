@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MindCare AI — Trimodal Emotion Support</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">🧠 MindCare AI</div>
+  <div class="status">
+    <span class="dot connected"></span> Connected
+  </div>
+  <button class="emergency-btn">🚨 Emergency Help</button>
+</header>
+
+<main class="dashboard">
+
+  <!-- ── Chat panel ──────────────────────────────────────────────── -->
+  <section class="chat-panel">
+    <h2>💬 Let's Talk</h2>
+    <div id="chat-window" class="chat-window"></div>
+
+    <div class="input-area">
+      <input
+        type="text"
+        id="user-input"
+        placeholder="Share your thoughts and feelings…"
+      />
+
+      <!-- Mic button -->
+      <button id="mic-btn" title="Hold to speak">🎙️</button>
+
+      <button id="send-btn">Send</button>
+    </div>
+
+    <!-- Voice status indicator -->
+    <div id="voice-status" class="voice-status hidden">
+      <span class="pulse-dot"></span>
+      <span id="voice-status-text">Listening…</span>
+    </div>
+  </section>
+
+  <!-- ── Video + emotion panel ───────────────────────────────────── -->
+  <section class="video-panel">
+    <h2>🎥 Live Video</h2>
+    <video id="live-video" autoplay muted></video>
+
+    <div class="camera-controls">
+      <button id="start-analysis">Start Camera</button>
+      <button id="stop-analysis" class="camera-btn stop-btn" disabled>Stop Camera</button>
+    </div>
+
+    <!-- Face emotion -->
+    <div class="emotion-panel">
+      <h3>😐 Face Emotion</h3>
+      <div id="emotion-display">Neutral</div>
+      <div id="emotion-bars"></div>
+    </div>
+
+    <!-- Voice emotion (new) -->
+    <div class="emotion-panel voice-emotion-panel">
+      <h3>🎙️ Voice Emotion</h3>
+      <div id="voice-emotion-display">—</div>
+      <div id="voice-confidence-bar" class="confidence-bar-wrapper">
+        <div id="voice-confidence-fill" class="confidence-bar-fill" style="width:0%"></div>
+      </div>
+      <div id="voice-confidence-label" class="confidence-label">0%</div>
+    </div>
+
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 MindCare AI — Empowering Mental Wellness</p>
+</footer>
+
+<script src="app.js" defer></script>
+
+<!-- Emergency modal -->
+<div id="emergency-modal" class="modal">
+  <div class="modal-content">
+    <h2>🚨 Emergency Support</h2>
+    <p>If you're in immediate danger or distress, please reach out for help.</p>
+    <p>You can directly call the nearest hospital or hotline for assistance.</p>
+    <a href="tel:+917680953091" class="call-btn">📞 Call Hospital (+91 7680953091)</a>
+    <button id="close-modal">Cancel</button>
+  </div>
+</div>
+
+</body>
+</html>
